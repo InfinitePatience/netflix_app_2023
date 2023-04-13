@@ -76,6 +76,7 @@ function Row({isLargeRow, title, id, fetchUrl}) {
           </SwiperSlide>
          ))}
         </div>
+        </Swiper>
         {/* <div className='slider__arrow right'>
           <span className='arrow' onClick={() => {document.getElementById(id).scrollLeft += (window.innerWidth - 80);}}>
             {">"}
@@ -86,7 +87,7 @@ function Row({isLargeRow, title, id, fetchUrl}) {
       {modalOpen && (
         <MovieModal {...movieSelected} setModalOpen={setModalOpen} />
       )}
-      </Swiper>
+      
     </section>
   )
 }

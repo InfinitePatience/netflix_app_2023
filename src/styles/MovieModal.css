@@ -9,7 +9,7 @@
   0% {opacity:0; transform: scale(0.5);}
   100% {opacity:1; transform:scale(1);}
 }
-.modal-close{z-index:1000; position:absolute; right:20px; top:20px; cursor:pointer;}
+.modal-close{z-index:1300; position:absolute; right:20px; top:20px; cursor:pointer;}
 .modal__poster-img{width:100%;}
 .modal__content{padding:40px;}
 .modal__details{font-size:18px; font-weight:600;}
