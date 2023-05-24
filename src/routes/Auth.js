@@ -3,7 +3,7 @@ import { GoogleAuthProvider, GithubAuthProvider, signInWithPopup } from 'firebas
 import { async } from '@firebase/util';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import AuthForm from '../components/AuthForm';
-// import '../styles/AuthForm.scss'
+import '../styles/Auth.css'
 
 // import "styles/auth.scss";
 
@@ -33,17 +33,22 @@ function Auth() {
 
   return (// input이 여러 개인 경우 어떤 input인지 알 수 없으므로 name을 각자 지정해서 구분한다.(id 사용 안 함) // input type='submit' 에서 newAccount값이 true 인지 false인지에 따라 value가 바뀌게 설정
   // name은 form 요소를 선택하기 위해서만 사용된다. 다른 요소에는 적용 안 됨.
+  <>
+    <div className='loginpage_logo'>
+      <img src={require('../images/PORTFOLIO.png')} alt="" />
+    </div>
+      <AuthForm />
     <div className="authContainer">
       {/* <FontAwesomeIcon icon="fa-brands fa-twitter" size='3x' color={"#04AAFF"}
       style={{marginBottom:30}}/> */}
-      <AuthForm />
+    </div>
       <div className="authBtns">
         <button onClick={onSocialClick} name="google" className='authBtn_google'>
           {/* Continue with Google */} <FontAwesomeIcon icon="fa-brands fa-google" /></button>
         <button onClick={onSocialClick} name="github" className='authBtn_github'>
           {/* Continue with Github */} <FontAwesomeIcon icon="fa-brands fa-github" /></button>
       </div>
-    </div>
+  </>
   )
 }
 

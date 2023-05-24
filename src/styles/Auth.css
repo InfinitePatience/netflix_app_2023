@@ -1,0 +1,46 @@
+.authContainer {
+  width:100%;
+  height:100vh;
+  background-image:url(../images/netflix_main.jpg);
+  background-size:cover;
+  background-repeat:no-repeat;
+  filter:brightness(0.5);
+}
+
+.authBtns { 
+  z-index:2;
+  display:flex;
+  flex-direction:row;
+  position:absolute;
+  left:52.5%;
+  top:65%;
+  transform:translate(-50%);
+  width:17vw;
+}
+
+.authBtn_google {
+  font-size:3vw;
+  margin-right:5vw;
+  background-color:transparent;
+  border:none;
+  color:#fff;
+}
+
+.authBtn_github {
+  font-size:3vw;
+  background-color:transparent;
+  border:none;
+  color:#fff;
+}
+
+.loginpage_logo {
+  z-index:10;
+  position:absolute;
+  top:3%;
+  left:2%;
+}
+
+.loginpage_logo > img {
+  width:9vw;
+  height:2vw;
+}

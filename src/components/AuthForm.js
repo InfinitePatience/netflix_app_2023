@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { authService } from '../fbase';
 // import '../styles/AuthForm.scss'
-// import "styles/authForm.scss";
+import "styles/Authform.css";
 
 function AuthForm() {
   const [email, setEmail] = useState('');
@@ -42,19 +42,23 @@ function AuthForm() {
   const toggleAccount = () => setAccount(prev => !prev); 
   return (
     <>
+    <div className='login'>
     {/* <section className='messager'>Messager</section> */}
     <form onSubmit={onSubmit} className="container">
-        <input name="email" type='email' placeholder='Email' required value={email} onChange={onChange} className="authInput_email"/>
+      <div className='background'></div>
+      <div className='login_logo'><p>로그인</p></div>
+        <input name="email" type='email' placeholder='이메일' required value={email} onChange={onChange} className="authInput_email"/>
 
-        <input name="password" type='password' placeholder='Password' required value={password} onChange={onChange} className="authInput_password"/>
+        <input name="password" type='password' placeholder='비밀번호' required value={password} onChange={onChange} className="authInput_password"/>
 
-        <input type='submit' value={newAccount ? "Create Account" : "Log In"} className="authSubmit"/> 
+        <input type='submit' value={newAccount ? "회원가입" : "로그인"} className="authSubmit"/> 
         {/* newAccount 값이 value 값을 true 인지 false 인지에 따라 입력된 값을 바뀌게 설정 */}
         {error && <span className="authError">{error}</span>}
       </form>
       <span onClick={toggleAccount} className="authSwitch">
-        {newAccount ? "Sign In" : "Create Account"}
+        {newAccount ? "로그인 전환" : "회원가입 전환"}
       </span>
+      </div>
     </>
   )
 }
