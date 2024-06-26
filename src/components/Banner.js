@@ -30,7 +30,7 @@ function Banner() {
       params : {append_to_response : "videos"}
     });
     console.log(":movieDetail->",movieDetail);
-    setMovie(movieDetail);
+      setMovie(movieDetail);
   }
 
   const truncate = (str, n) => {
