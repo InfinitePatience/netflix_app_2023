@@ -24,6 +24,7 @@
   background-color:transparent;
   border:none;
   color:#fff;
+  cursor: pointer;
 }
 
 .authBtn_github {
@@ -31,6 +32,7 @@
   background-color:transparent;
   border:none;
   color:#fff;
+  cursor: pointer;
 }
 
 .loginpage_logo {

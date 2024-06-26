@@ -2,6 +2,7 @@ import { authService } from '../fbase';
 import { GoogleAuthProvider, GithubAuthProvider, signInWithPopup } from 'firebase/auth';
 import { async } from '@firebase/util';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import AuthForm from '../components/AuthForm';
 import '../styles/Auth.css'
 
